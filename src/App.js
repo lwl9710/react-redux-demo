@@ -8,7 +8,7 @@ function App() {
     const [count, setCount] = useState(0);
     // const myRef = useRef(null);   验证函数依赖
 
-    const stateChange = useCallback(()=>setCount(store.getState().count),[])
+    const stateChange = useCallback(state=>setCount(state.count),[])
 
     const addCountAction = useMemo(()=>getAddCountAction(2),[]);
     const delCountAction = useMemo(()=>getDelCountAction(2),[]);
