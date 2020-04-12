@@ -17,8 +17,9 @@ store.listener = function() {
         //处理器
         __handlers: [],
         //使用处理器
-        use: function(fn) {
+        use: function(fn,isInit = true) {
             this.__handlers.push(fn);
+            isInit && fn(store.getState());
         },
         //取消处理器使用
         unUse: function(fn) {

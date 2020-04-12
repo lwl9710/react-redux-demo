@@ -17,8 +17,6 @@ function App() {
     const delCount = useActionCallback(delCountAction);
 
     useEffect(()=>{
-        setCount(store.getState().count);
-
         store.listener.use(stateChange);
 
         return ()=>store.listener.unUse(stateChange);
