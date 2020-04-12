@@ -1,4 +1,4 @@
-<h3 style = "text-align: center">一个简单的计数器演示</h1>
+<h3 align = "center">一个简单的计数器演示</h1>
 
 * 运行项目命令(development)
 
